@@ -113,6 +113,7 @@
   <ItemGroup>
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedListIterator.h" />
+    <ClInclude Include="Stack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TestLinkedList.cpp" />

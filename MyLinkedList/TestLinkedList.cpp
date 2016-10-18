@@ -1,9 +1,11 @@
 #include"LinkedList.h"
 #include"LinkedListIterator.h"
+#include"Stack.h"
 #include<algorithm>
 using namespace std;
 using namespace Khellendros;
 void testInit() {
+	cout << "Test LinkedList(initialize)" << endl;
 	cout << "Ä¬ÈÏ¹¹Ôì£º" << endl;
 	LinkedList<int> list1;
 	cout << "pushBack():" << endl;
@@ -18,6 +20,8 @@ void testInit() {
 }
 void testOtherFunc()
 {
+	cout << "====================" << endl;
+	cout << "Test Other Functions" << endl;
 	LinkedList<int> list = { 1,2,3,4,5,6,7 };
 	cout << list << endl;
 	cout << "pushFront():" << endl;
@@ -59,10 +63,26 @@ void testOtherFunc()
 		cout << "not found..." << endl;
 	}
 }
+void testStack()
+{
+	cout << "====================" << endl;
+	cout << "Test Stack" << endl;
+	LinkedList<char> chars = {'a','b','c'};
+	Stack<char> charStack(chars);
+	char c1, c2;
+	charStack >> c1 >> c2;
+	cout << "c1: " << c1 << " c2: " << c2 << endl;
+	cout << "charStack: " << charStack << endl;
+	cout << "chars: " << chars << endl;
+	charStack << c1 << c2;
+	cout << "top: " << charStack.top() << endl;
+	cout << "charStack: " << charStack << endl;
+}
 int main()
 {
 	testInit();
 	testOtherFunc();
+	testStack();
 	system("pause");
 	return 0;
 }

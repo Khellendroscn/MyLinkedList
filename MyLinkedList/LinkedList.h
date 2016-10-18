@@ -189,10 +189,7 @@ namespace Khellendros {
 			if (!isSimpleCopy)
 			{
 				//依次释放所有节点
-				while (length>0)
-				{
-					popBack();
-				}
+				clear();
 				delete rootNode;
 			}
 		}
@@ -330,6 +327,13 @@ namespace Khellendros {
 				temp->swapPtr();
 			}
 			rootNode->swapPtr();
+		}
+		void clear()
+		{
+			while (length>0)
+			{
+				popBack();
+			}
 		}
 		IterType begin()
 		{
